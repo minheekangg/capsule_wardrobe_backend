@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :outfits
-  resources :ootds
-  resources :items
-  resources :categories
-  resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api do
+    namespace :v1 do
+      resources :outfits
+      resources :ootds
+      resources :items
+      resources :categories
+      resources :users
+      resources :matches
+    end
+  end
 end

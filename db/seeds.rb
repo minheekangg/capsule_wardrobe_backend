@@ -1,8 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# <User id: nil, username: nil, password: nil, image: nil, city: nil, created_at: nil, updated_at: nil>
+minhee = User.create(username: "minhee", password: "password", image: "https://res.cloudinary.com/dly4mslmg/image/upload/v1546896573/z1wmcngqkpolcc3flezo.jpg", city: "NYC" )
 
+# <Category id: nil, name: nil, created_at: nil, updated_at: nil>
+sweater = Category.create(name: 'sweater')
+
+# <Item id: nil, name: nil, image: nil, times_worn: 0, category_id: nil, user_id: nil, created_at: nil, updated_at: nil>
+i = Item.create(name: "everlane sweater", image: "https://res.cloudinary.com/dly4mslmg/image/upload/v1547050908/acw9p87motbrwuzrpb1k.jpg", category_id: sweater.id, user_id: minhee.id)
+
+# <Ootd id: nil, outfit_id: nil, item_id: nil, created_at: nil, updated_at: nil>
+# <Outfit id: nil, user_id: nil, day: nil, favorite: false, created_at: nil, updated_at: nil>

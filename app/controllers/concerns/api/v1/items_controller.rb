@@ -1,4 +1,4 @@
-class ItemsController < ApplicationController
+class Api::V1::ItemsController < ApplicationController
   before_action :set_item, only: [:show, :update, :destroy]
 
   # GET /items
@@ -46,6 +46,6 @@ class ItemsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def item_params
-      params.require(:item).permit(:name, :image, :times_worn, :category_id, :ootd_id)
+      params.require(:item).permit(:name, :image, :times_worn, :category_id, :user_id)
     end
 end
