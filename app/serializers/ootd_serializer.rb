@@ -1,3 +1,3 @@
 class OotdSerializer < ActiveModel::Serializer
-  attributes :id, :day, :outfit_id, :favorite
+  attributes :id, :outfit_id, :item_id
 end

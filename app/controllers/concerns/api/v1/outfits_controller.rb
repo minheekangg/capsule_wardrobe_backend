@@ -1,4 +1,4 @@
-class OutfitsController < ApplicationController
+class Api::V1::OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :update, :destroy]
 
   # GET /outfits
@@ -46,6 +46,6 @@ class OutfitsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def outfit_params
-      params.require(:outfit).permit(:user_id)
+      params.require(:outfit).permit(:user_id, :day, :favorite)
     end
 end

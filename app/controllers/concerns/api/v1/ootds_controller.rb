@@ -1,4 +1,4 @@
-class OotdsController < ApplicationController
+class Api::V1::OotdsController < ApplicationController
   before_action :set_ootd, only: [:show, :update, :destroy]
 
   # GET /ootds
@@ -46,6 +46,6 @@ class OotdsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def ootd_params
-      params.require(:ootd).permit(:day, :outfit_id, :favorite)
+      params.require(:ootd).permit(:outfit_id, :item_id)
     end
 end

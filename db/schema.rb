@@ -17,10 +17,8 @@ ActiveRecord::Schema.define(version: 2019_01_09_152500) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -28,24 +26,26 @@ ActiveRecord::Schema.define(version: 2019_01_09_152500) do
     t.string "image"
     t.integer "times_worn", default: 0
     t.bigint "category_id"
-    t.bigint "ootd_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_items_on_category_id"
-    t.index ["ootd_id"], name: "index_items_on_ootd_id"
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "ootds", force: :cascade do |t|
-    t.date "day"
     t.bigint "outfit_id"
-    t.boolean "favorite"
+    t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_ootds_on_item_id"
     t.index ["outfit_id"], name: "index_ootds_on_outfit_id"
   end
 
   create_table "outfits", force: :cascade do |t|
     t.bigint "user_id"
+    t.date "day"
+    t.boolean "favorite", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_outfits_on_user_id"
