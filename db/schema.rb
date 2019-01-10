@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_09_152500) do
+ActiveRecord::Schema.define(version: 2019_01_09_174038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 2019_01_09_152500) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "matched_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["matched_user_id"], name: "index_matches_on_matched_user_id"
+    t.index ["user_id", "matched_user_id"], name: "index_matches_on_user_id_and_matched_user_id", unique: true
+    t.index ["user_id"], name: "index_matches_on_user_id"
   end
 
   create_table "ootds", force: :cascade do |t|
@@ -60,4 +70,6 @@ ActiveRecord::Schema.define(version: 2019_01_09_152500) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "matches", "users"
+  add_foreign_key "matches", "users", column: "matched_user_id"
 end
