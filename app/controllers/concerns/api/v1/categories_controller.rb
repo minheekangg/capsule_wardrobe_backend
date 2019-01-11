@@ -3,8 +3,7 @@ class Api::V1::CategoriesController < ApplicationController
 
   # GET /categories
   def index
-    @categories = current_user.categories
-
+    @categories = Category.all
     render json: @categories
   end
 
@@ -15,7 +14,7 @@ class Api::V1::CategoriesController < ApplicationController
 
   # POST /categories
   def create
-    @category = current_user.categories.build(category_params)
+    @category = Category.create(category_params)
 
     if @category.save
       render json: @category, status: :created, location: @category
@@ -41,7 +40,7 @@ class Api::V1::CategoriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category
-      @category = current_user.categories.find(params[:id])
+      @category = Category.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
