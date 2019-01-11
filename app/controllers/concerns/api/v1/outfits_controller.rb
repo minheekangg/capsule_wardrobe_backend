@@ -3,7 +3,7 @@ class Api::V1::OutfitsController < ApplicationController
 
   # GET /outfits
   def index
-    @outfits = Outfit.all
+    @outfits = current_user.outfits
 
     render json: @outfits
   end
@@ -15,7 +15,7 @@ class Api::V1::OutfitsController < ApplicationController
 
   # POST /outfits
   def create
-    @outfit = Outfit.new(outfit_params)
+    @outfit = current_user.outfits.build(ootd_params)
 
     if @outfit.save
       render json: @outfit, status: :created, location: @outfit
@@ -41,7 +41,7 @@ class Api::V1::OutfitsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_outfit
-      @outfit = Outfit.find(params[:id])
+      @outfit = current_user.outfits.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

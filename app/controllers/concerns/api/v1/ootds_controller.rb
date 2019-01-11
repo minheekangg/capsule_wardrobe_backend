@@ -3,7 +3,7 @@ class Api::V1::OotdsController < ApplicationController
 
   # GET /ootds
   def index
-    @ootds = Ootd.all
+    @ootds = current_user.ootds
 
     render json: @ootds
   end
@@ -15,7 +15,7 @@ class Api::V1::OotdsController < ApplicationController
 
   # POST /ootds
   def create
-    @ootd = Ootd.new(ootd_params)
+    @ootd = current_user.ootds.build(ootd_params)
 
     if @ootd.save
       render json: @ootd, status: :created, location: @ootd
@@ -41,7 +41,7 @@ class Api::V1::OotdsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ootd
-      @ootd = Ootd.find(params[:id])
+      @ootd = current_user.ootds.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
