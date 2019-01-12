@@ -3,14 +3,15 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :categories
       resources :matches
-      resources :users, only: [:create]
-        post '/login', to: 'auth#create'
-        get '/profile', to: 'users#profile'
-      resources :users, only: [:show] do
-      resources :outfits
-      resources :ootds
-      resources :items
+      post '/login', to: 'auth#create'
+      get '/profile', to: 'users#profile'
+      resources :users do
+      # resources :users, only: [:show, :index] do
+        resources :outfits
+        resources :ootds
+        resources :items
       end
+      # resources :users, only: [:create]
     end
   end
 
