@@ -15,7 +15,6 @@ class Api::V1::OotdsController < ApplicationController
 
   # POST /ootds
   def create
-    # byebug
     @ootd = Ootd.create(ootd_params)
     if @ootd.save
       render json: @ootd, status: :created
