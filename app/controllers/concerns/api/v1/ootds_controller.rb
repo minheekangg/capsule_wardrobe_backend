@@ -18,7 +18,7 @@ class Api::V1::OotdsController < ApplicationController
     @ootd = current_user.ootds.build(ootd_params)
 
     if @ootd.save
-      render json: @ootd, status: :created, location: @ootd
+      render json: @ootd, status: :created
     else
       render json: @ootd.errors, status: :unprocessable_entity
     end

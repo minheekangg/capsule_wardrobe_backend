@@ -2,7 +2,7 @@ require 'test_helper'
 
 class OotdsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @ootd = ootds(:one)
+    @ootd = current_user.ootds(:one)
   end
 
   test "should get index" do

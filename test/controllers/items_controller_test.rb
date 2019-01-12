@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ItemsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @item = items(:one)
+    @item = current_user.items(:one)
   end
 
   test "should get index" do
@@ -12,7 +12,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create item" do
     assert_difference('Item.count') do
-      post items_url, params: { item: { category_id: @item.category_id, image: @item.image, name: @item.name, ootd_id: @item.ootd_id, times_worn: @item.times_worn } }, as: :json
+      post items_url, params: { item: { category_id: @item.category_id, image: @item.image, name: @item.name, user_id: @item.user_id, times_worn: @item.times_worn } }, as: :json
     end
 
     assert_response 201
