@@ -18,12 +18,7 @@ class Api::V1::OutfitsController < ApplicationController
     @outfit = current_user.outfits.build(outfit_params)
 
     if @outfit.save
-      render json: {outfit: @outfit}, status: :created, location: url_for([:api, :v1,@user, @outfit])
-      # byebug
-      # render json: @outfit, status: :created, location: url_for([:api, :v1,@outfit])
-      # render json: {outfit: @outfit}, status: :created
-      # render status: :created, json: @outfit 
-
+      render json: @outfit, status: :created
     else
       render json: @outfit.errors, status: :unprocessable_entity
     end
