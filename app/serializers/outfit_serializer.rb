@@ -1,5 +1,5 @@
 class OutfitSerializer < ActiveModel::Serializer
   attributes :id, :user_id, :day, :favorite
   belongs_to :user
-  has_many :ootds
+  has_many :items
 end

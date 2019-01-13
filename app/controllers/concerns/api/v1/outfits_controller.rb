@@ -4,7 +4,6 @@ class Api::V1::OutfitsController < ApplicationController
   # GET /outfits
   def index
     @outfits = current_user.outfits
-
     render json: @outfits
   end
 
@@ -16,7 +15,6 @@ class Api::V1::OutfitsController < ApplicationController
   # POST /outfits
   def create
     @outfit = current_user.outfits.build(outfit_params)
-
     if @outfit.save
       render json: @outfit, status: :created
     else
