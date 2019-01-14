@@ -6,16 +6,20 @@ activewear = Category.create(name: 'Activewear')
 coat = Category.create(name: 'Coats')
 dresses = Category.create(name: 'Dresses')
 jackets = Category.create(name: 'Jackets')
-pants = Category.create(name: 'Pants')
-jeans = Category.create(name: 'Jeans')
-skirts = Category.create(name: 'Skirts')
+bottoms = Category.create(name: 'Bottoms')
+# jeans = Category.create(name: 'Jeans')
+# skirts = Category.create(name: 'Skirts')
 sweatshirts = Category.create(name: 'Sweatshirts')
 tops = Category.create(name: 'Tops')
 shoes = Category.create(name: 'Shoes')
 misc = Category.create(name: 'Misc')
 
 # <Item id: nil, name: nil, image: nil, times_worn: 0, category_id: nil, user_id: nil, created_at: nil, updated_at: nil>
-i = Item.create(name: "everlane sweater", image: "https://res.cloudinary.com/dly4mslmg/image/upload/v1547050908/acw9p87motbrwuzrpb1k.jpg", category_id: sweatshirts.id, user_id: minhee.id)
+
+
+dresspad = Item.create(name: "Tibi Dress", image: "https://res.cloudinary.com/dly4mslmg/image/upload/w_300,h_300,c_lpad,b_white/v1547478706/r118pc1051-pleated-sleeveless-dress-with-removable-belt-blush-1-look.1544627945.jpg", category_id: dresses.id, user_id: minhee.id)
+
+
 
 # <Ootd id: nil, outfit_id: nil, item_id: nil, created_at: nil, updated_at: nil>
 # <Outfit id: nil, user_id: nil, day: nil, favorite: false, created_at: nil, updated_at: nil>
