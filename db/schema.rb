@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_01_09_174038) do
     t.string "name"
     t.string "image"
     t.integer "times_worn", default: 0
+    t.string "current_status", default: "closet"
     t.bigint "category_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false

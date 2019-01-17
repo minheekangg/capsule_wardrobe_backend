@@ -4,7 +4,8 @@ class Api::V1::ItemsController < ApplicationController
   # GET /items
   def index
     @items = current_user.items
-
+    # @categorizedItems = @items.map{ |c| [c.category.name,c] }.to_h
+    
     render json: @items
   end
 
