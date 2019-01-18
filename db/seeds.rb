@@ -3,8 +3,7 @@ minhee = User.create(username: "minhee", password: "password", image: "https://r
 buyer = User.create(username: "buyer123", password: "p123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/user.png", city: "NYC" )
 
 # <Category id: nil, name: nil, created_at: nil, updated_at: nil>
-coat = Category.create(name: 'Coats')
-jackets = Category.create(name: 'Jackets')
+jackets = Category.create(name: 'Outerwears')
 sweatshirts = Category.create(name: 'Sweatshirts')
 tops = Category.create(name: 'Tops')
 bottoms = Category.create(name: 'Bottoms')
