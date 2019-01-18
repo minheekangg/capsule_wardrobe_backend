@@ -18,8 +18,6 @@ shoes = Category.create(name: 'Shoes')
 # <Item id: nil, name: nil, image: nil, times_worn: 0, category_id: nil, user_id: nil, created_at: nil, updated_at: nil>
 
 # MINHEES CLOSET
-mi1 = Item.create(name: "Tibi Dress", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/r118pc1051-pleated-sleeveless-dress-with-removable-belt-blush-1-look.1544627945.jpg", category_id: dresses.id, user_id: minhee.id)
-uglysweater = Item.create(name: "Xmas Gift", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/btrrscpoby3jizpr7zuw.jpg", category_id: sweatshirts.id, user_id: minhee.id, updated_at: "2018-12-27 00:00:00".to_date)
 mi2 = Item.create(name: "Cropped Wide Leg Pants", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/tw5s7ftvcteagiupuyu4.jpg", category_id: bottoms.id, user_id: minhee.id, updated_at: "2010-01-01 00:00:00".to_date)
 m13=Item.create(name: "Jeans", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/clwvkizsmkhxzj2vxmy0.jpg", category_id: bottoms.id, user_id: minhee.id, updated_at: "2010-01-01 00:00:00".to_date)
 m14 =Item.create(name: "Star Gucci Slides", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/dqcn1qiokfbf0i8kldpa.jpg", category_id: shoes.id, user_id: minhee.id, updated_at: "2010-01-01 00:00:00".to_date)
