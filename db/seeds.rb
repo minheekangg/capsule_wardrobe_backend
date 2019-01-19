@@ -3,7 +3,7 @@ minhee = User.create(username: "minhee", password: "password", image: "https://r
 buyer = User.create(username: "buyer123", password: "p123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/user.png", city: "NYC" )
 
 # <Category id: nil, name: nil, created_at: nil, updated_at: nil>
-jackets = Category.create(name: 'Outerwears')
+outerwears = Category.create(name: 'Outerwears')
 sweatshirts = Category.create(name: 'Sweatshirts')
 tops = Category.create(name: 'Tops')
 bottoms = Category.create(name: 'Bottoms')
@@ -25,7 +25,7 @@ m15 =Item.create(name: "Navy Top", image: "https://res.cloudinary.com/#{ENV["clo
 m16 =Item.create(name: "Navy Work Pants", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/hvgddwmbufkvzojuzwzc.jpg", category_id: bottoms.id, user_id: minhee.id, updated_at: "2010-01-01 00:00:00".to_date)
 m17 =Item.create(name: "DVF Sweater", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/m8dvg2ilnsd7jxx1f5a8.jpg", category_id: sweatshirts.id, user_id: minhee.id, updated_at: "2010-01-01 00:00:00".to_date)
 m18 =Item.create(name: "Green Scallop Top", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/evqkq47fdwn5q4melx0y.jpg", category_id: tops.id, user_id: minhee.id, updated_at: "2010-01-01 00:00:00".to_date)
-mi9 =Item.create(name: "Camel Coat", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/pyaw25nwumhon8opp0ej.jpg", category_id: coat.id, user_id: minhee.id, updated_at: "2010-01-01 00:00:00".to_date)
+mi9 =Item.create(name: "Camel Coat", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/pyaw25nwumhon8opp0ej.jpg", category_id: outerwears.id, user_id: minhee.id, updated_at: "2010-01-01 00:00:00".to_date)
 
 #BUYER123 CLOSET
 bi1 =Item.create(name: "Pink Sweater", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/eqkzkbznyvoffkvm1ast.jpg", category_id: sweatshirts.id, user_id: buyer.id, updated_at: "2010-01-01 00:00:00".to_date)
