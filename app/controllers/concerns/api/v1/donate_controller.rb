@@ -1,8 +1,15 @@
 class Api::V1::DonateController < ApplicationController
-
-def donates
-    @donates = RestClient.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.8670522,-74.1957362&radius=1500&keyword=donation&key=#{ENV["google_map_api"]}")
+    
+    def donates
+        # byebug
+    @donates = RestClient.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{params[:latitude]},#{params[:longitude]}&radius=2000&keyword=donation&key=#{ENV["google_map_api"]}")
     render json:@donates
+end
+
+def geocode
+    location = params["location"].split(' ').join('+')
+    @result = RestClient.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{location}&key=#{ENV["google_map_api"]}")
+    render json:@result
 end
 
 end

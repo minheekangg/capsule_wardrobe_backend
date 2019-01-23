@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get 'weather', to: 'weather#weathers'
       get 'donate', to: 'donate#donates'
+      get 'geocode', to: 'donate#geocode'
       resources :matches
       resources :listings
       resources :ootds
