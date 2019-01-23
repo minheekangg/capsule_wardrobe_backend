@@ -44,6 +44,6 @@ class Api::V1::OutfitsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def outfit_params
-      params.require(:outfit).permit(:user_id, :day, :favorite)
+      params.require(:outfit).permit(:user_id, :day, :favorite, :weather, :temperature, :location)
     end
 end
