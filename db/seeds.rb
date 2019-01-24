@@ -1,6 +1,6 @@
 # <User id: nil, username: nil, password: nil, image: nil, city: nil, created_at: nil, updated_at: nil>
-minhee = User.create(username: "minhee", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/user.png", city: "NYC" )
-buyer = User.create(username: "buyer1", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/kig0dufhsx4vhgu30tf2.jpg", city: "Boston MA" )
+minhee = User.create(username: "minhee", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/kig0dufhsx4vhgu30tf2.jpg", city: "NYC" )
+buyer = User.create(username: "buyer1", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/user.png", city: "Boston MA" )
 everlane = User.create(username: "everlanegirl", password: "123", image: "https://d1qb2nb5cznatu.cloudfront.net/startups/i/47063-05f369b7b1527132ba05343f1b8ebb91-medium_jpg.jpg?buster=1377384199", city: "Los Angeles" )
 steve = User.create(username: "steveJobs", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/dlu2kk2i8wcxatnhkgia.jpg" )
 cb = User.create(username: "carrieBradshaw", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/shzbghvxmgds3mmgbhnh.jpg" )
@@ -16,13 +16,13 @@ activewear = Category.create(name: 'Activewear')
 misc = Category.create(name: 'Misc')
 shoes = Category.create(name: 'Shoes')
 
-steve1 = Item.create(name: "Turtleneck", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/goods_09_173217.jpg" , current_status: "Sell", category_id: bottoms.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
+steve1 = Item.create(name: "Turtleneck", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/goods_09_173217.jpg" , current_status: "Sell", category_id: tops.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
 Listing.create(seller_id: cb.id, item_id: steve1.id, price: 10)
-steve2 = Item.create(name: "Turtleneck2", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/goods_09_173217.jpg" , current_status: "Sell", category_id: bottoms.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
+steve2 = Item.create(name: "Turtleneck2", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/goods_09_173217.jpg" , current_status: "Sell", category_id: tops.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
 Listing.create(seller_id: cb.id, item_id: steve2.id, price: 15)
-steve3 = Item.create(name: "Turtleneck3", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/goods_09_173217.jpg" , current_status: "Sell", category_id: bottoms.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
+steve3 = Item.create(name: "Turtleneck3", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/goods_09_173217.jpg" , current_status: "Sell", category_id: tops.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
 Listing.create(seller_id: cb.id, item_id: steve3.id, price: 20)
-steve4 = Item.create(name: "Turtleneck4", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/goods_09_173217.jpg" , current_status: "Sell", category_id: bottoms.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
+steve4 = Item.create(name: "Turtleneck4", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/goods_09_173217.jpg" , current_status: "Sell", category_id: tops.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
 Listing.create(seller_id: cb.id, item_id: steve4.id, price: 1)
 
 # <Item id: nil, name: nil, image: nil, times_worn: 0, category_id: nil, user_id: nil, created_at: nil, updated_at: nil>
@@ -52,6 +52,9 @@ Listing.create(seller_id: minhee.id, item_id: teddy.id, price: 300)
 dress =Item.create(name: "Dress", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/247988_1_large.jpg", category_id: outerwears.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date, current_status: "Sell")
 Listing.create(seller_id: minhee.id, item_id: dress.id, price: 100)
 mi21 =Item.create(name: "DVF Dress", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/quyk4sj6he1f68lviodz.jpg", category_id: dresses.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date)
+
+
+
 
 #BUYER123 CLOSET
 bi1 =Item.create(name: "Pink Sweater", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/eqkzkbznyvoffkvm1ast.jpg", category_id: sweatshirts.id, user_id: buyer.id, updated_at: "2018-12-29 00:00:00".to_date)
@@ -135,7 +138,7 @@ Listing.create(seller_id: cb.id, item_id: c11.id, price: 1000)
 c12 = Item.create(name: "Cinq a Sept Pants", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/CinqaSeptPants.png" , current_status: "Sell", category_id: bottoms.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
 Listing.create(seller_id: cb.id, item_id: c12.id, price: 1000)
 
-c13 = Item.create(name: "Faux Fur Jacket", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/fauxfurjacket.png" , current_status: "Sell", category_id: bottoms.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
+c13 = Item.create(name: "Faux Fur Jacket", image:"https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/fauxfurjacket.png" , current_status: "Sell", category_id: outerwears.id, user_id:cb.id, updated_at: "2018-12-29 00:00:00".to_date )
 Listing.create(seller_id: cb.id, item_id: c13.id, price: 1000)
 
 # outerwears // sweatshirts // tops //bottoms // dresses // activewear // misc //shoes 
@@ -247,5 +250,14 @@ eo6 = Outfit.create(user_id: 3, day: "2019-01-17", weather: "cloudy", temperatur
 Ootd.create(outfit_id: eo6.id, item_id: 46)
 Ootd.create(outfit_id: eo6.id, item_id: 37)
 Ootd.create(outfit_id: eo6.id, item_id: 39)
+
+Item.create(name: "Pink Sweater", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/eqkzkbznyvoffkvm1ast.jpg", category_id: sweatshirts.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date)
+
+Item.create(name: "Wide Leg Pants", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/pmh78zigc88dqc2cfj7u.jpg", category_id: bottoms.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date)
+Item.create(name: "Comme des Garcons shoes", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/ac6d9tyhzx8tzxhhxodp.jpg", category_id: shoes.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date)
+Item.create(name: "White Pants", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/cvcryjbpfeqqzjhfeafd.jpg", category_id: bottoms.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date)
+Item.create(name: "100% Human Everlane Sweater", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/evqxtssy9g7wxk38tbrs.jpg", category_id: sweatshirts.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date)
+Item.create(name: "Black Work pants", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/qiyiybasxzcp6rf5ebsu.jpg", category_id: bottoms.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date)
+Item.create(name: "Cami top", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_img_setting"]}/#{ENV["cloudinary_folder"]}/jrcnlbnfkddoboezyexs.jpg", category_id: tops.id, user_id: minhee.id, updated_at: "2018-12-29 00:00:00".to_date)
 
 
