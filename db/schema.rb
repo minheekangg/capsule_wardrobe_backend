@@ -49,9 +49,6 @@ ActiveRecord::Schema.define(version: 2019_01_17_170836) do
   create_table "ootds", force: :cascade do |t|
     t.bigint "outfit_id"
     t.bigint "item_id"
-    t.string "weather"
-    t.string "temperature"
-    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_ootds_on_item_id"
