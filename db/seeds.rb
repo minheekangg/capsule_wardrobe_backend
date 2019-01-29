@@ -1,5 +1,5 @@
 # <User id: nil, username: nil, password: nil, image: nil, city: nil, created_at: nil, updated_at: nil>
-minhee = User.create(username: "minhee", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/kig0dufhsx4vhgu30tf2.jpg", city: "NYC" )
+minhee = User.create(username: "minhee", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/kig0dufhsx4vhgu30tf2.jpg", city: "Boston MA" )
 buyer = User.create(username: "buyer1", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/user.png", city: "Boston MA" )
 everlane = User.create(username: "everlanegirl", password: "123", image: "https://d1qb2nb5cznatu.cloudfront.net/startups/i/47063-05f369b7b1527132ba05343f1b8ebb91-medium_jpg.jpg?buster=1377384199", city: "Los Angeles" )
 steve = User.create(username: "steveJobs", password: "123", image: "https://res.cloudinary.com/#{ENV["cloudinary_name"]}/image/upload/#{ENV["cloudinary_folder"]}/dlu2kk2i8wcxatnhkgia.jpg" )
