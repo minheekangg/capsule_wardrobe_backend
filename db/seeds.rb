@@ -164,19 +164,19 @@ Listing.create(seller_id: hb.id, item_id: hb5.id, price: 100)
 
 
 
-moutfit1 = Outfit.create(user_id: minhee.id, day: "2019-01-22", weather: "partly-cloudy-night", temperature: "26.74", location: "New York, NY, USA")
+moutfit1 = Outfit.create(user_id: minhee.id, day: "2019-01-22", weather: "partly-cloudy-night", temperature: "26.74", location: "Boston, MA, USA")
 Ootd.create(outfit_id: moutfit1.id, item_id: 23)
 Ootd.create(outfit_id: moutfit1.id, item_id: 9)
 Ootd.create(outfit_id: moutfit1.id, item_id: 20)
 Ootd.create(outfit_id: moutfit1.id, item_id: 7)
 
-mo2 = Outfit.create(user_id: 1, day: "2019-01-21", favorite: false, weather: "clear-night", temperature: "12.85", location: "New York, NY, USA")
+mo2 = Outfit.create(user_id: 1, day: "2019-01-21", favorite: false, weather: "clear-night", temperature: "12.85", location: "Boston, MA, USA")
 Ootd.create(outfit_id: mo2.id, item_id: 21)
 Ootd.create(outfit_id: mo2.id, item_id: 14)
 Ootd.create(outfit_id: mo2.id, item_id: 10)
 Ootd.create(outfit_id: mo2.id, item_id: 15)
 
-mo3 = Outfit.create(user_id: 1, day: "2019-01-20", favorite: false, weather: "cloudy", temperature: "33.87", location: "New York, NY, USA")
+mo3 = Outfit.create(user_id: 1, day: "2019-01-20", favorite: false, weather: "cloudy", temperature: "33.87", location: "Boston, MA, USA")
 Ootd.create(outfit_id: mo3.id, item_id: 16)
 Ootd.create(outfit_id: mo3.id, item_id: 10)
 Ootd.create(outfit_id: mo3.id, item_id: 7)
@@ -185,7 +185,7 @@ mo4 = Outfit.create(user_id: 1, day: "2019-01-17", favorite: false, weather: "cl
 Ootd.create(outfit_id: mo4.id, item_id: 9)
 Ootd.create(outfit_id: mo4.id, item_id: 26)
 
-mo5 = Outfit.create(user_id: 1, day: "2019-01-18", favorite: false, weather: "partly-cloudy-night", temperature: "34.58", location: "New York, NY, USA")
+mo5 = Outfit.create(user_id: 1, day: "2019-01-18", favorite: false, weather: "partly-cloudy-night", temperature: "34.58", location: "Boston, MA, USA")
 Ootd.create(outfit_id: mo5.id, item_id: 12)
 Ootd.create(outfit_id: mo5.id, item_id: 5)
 Ootd.create(outfit_id: mo5.id, item_id: 23)
@@ -196,7 +196,7 @@ Ootd.create(outfit_id: mo6.id, item_id: 9)
 Ootd.create(outfit_id: mo6.id, item_id: m18.id)
 Ootd.create(outfit_id: mo6.id, item_id: 13)
 
-mo7 = Outfit.create(user_id: 1, day: "2019-01-15", favorite: false, weather: "clear-night", temperature: "27.95", location: "New York, NY, USA")
+mo7 = Outfit.create(user_id: 1, day: "2019-01-15", favorite: false, weather: "clear-night", temperature: "27.95", location: "Boston, MA, USA")
 Ootd.create(outfit_id: mo7.id, item_id: 10)
 Ootd.create(outfit_id: mo7.id, item_id: 6)
 Ootd.create(outfit_id: mo7.id, item_id: 11)
